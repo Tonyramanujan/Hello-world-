@@ -397,15 +397,13 @@ setInterval(()=>{
 
 // ---------- Hidden Surprise ----------
 
-   
-const bigHeart = document.querySelector(".bigHeart");
+   const bigHeart = document.querySelector(".bigHeart");
 
-    if (bigHeart) {
-        bigHeart.addEventListener("click", function () {
-            launchFireworks();
-        });
-    }
-});
+if (bigHeart) {
+
+    bigHeart.addEventListener("click", () => {
+
+        launchFireworks();
 
         const final = document.createElement("div");
 
