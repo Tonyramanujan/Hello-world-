@@ -397,8 +397,8 @@ setInterval(()=>{
 
 // ---------- Hidden Surprise ----------
 
-document.addEventListener("DOMContentLoaded", function () {
-    const bigHeart = document.querySelector(".bigHeart");
+   
+const bigHeart = document.querySelector(".bigHeart");
 
     if (bigHeart) {
         bigHeart.addEventListener("click", function () {
