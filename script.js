@@ -4,20 +4,17 @@
 // Background Music
 // Scroll to About Section
 // =====================================================
-const music = document.getElementById("bgMusic");
 const startBtn = document.getElementById("startBtn");
+const music = document.getElementById("bgMusic");
 
-if (startBtn && music) {
-    startBtn.addEventListener("click", () => {
+if (startBtn) {
+    startBtn.addEventListener("click", function () {
 
-        music.volume = 0.5;
-
-        music.play().catch(err => {
-            console.log(err);
-        });
+        if (music) {
+            music.play().catch(console.error);
+        }
 
         const about = document.getElementById("about");
-
         if (about) {
             about.scrollIntoView({
                 behavior: "smooth"
