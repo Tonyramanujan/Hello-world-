@@ -7,36 +7,29 @@
 
 const startBtn = document.getElementById("startBtn");
 const music = document.getElementById("bgMusic");
-
 if (startBtn) {
-
     startBtn.addEventListener("click", function () {
 
-        // Play background music
+        // Hide the button after it's clicked
+        startBtn.style.display = "none";
+
+        // Start background music
         if (music) {
             music.volume = 0.5;
-
-            music.play().catch(function (err) {
-                console.log("Music autoplay blocked:", err);
-            });
+            music.play().catch(console.error);
         }
 
-        // Smooth scroll to About section
+        // Scroll to About Her section
         const about = document.getElementById("about");
-
         if (about) {
-
             about.scrollIntoView({
-
                 behavior: "smooth"
-
             });
-
         }
 
     });
-
 }
+
 
 // ============================================
 // Floating welcome animation
