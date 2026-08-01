@@ -216,8 +216,7 @@ section h1{
 
     animation:fadeUp 1.5s ease;
 
-}
-
+} 
 @keyframes fadeUp{
 
     from{
