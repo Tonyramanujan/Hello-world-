@@ -4,38 +4,27 @@
 // Background Music
 // Scroll to About Section
 // =====================================================
-
-const startBtn = document.getElementById("startBtn");
 const music = document.getElementById("bgMusic");
+const startBtn = document.getElementById("startBtn");
 
-if (startBtn) {
+if (startBtn && music) {
+    startBtn.addEventListener("click", () => {
 
-    startBtn.addEventListener("click", function () {
+        music.volume = 0.5;
 
-        // Play background music
-        if (music) {
-            music.volume = 0.5;
+        music.play().catch(err => {
+            console.log(err);
+        });
 
-            music.play().catch(function (err) {
-                console.log("Music autoplay blocked:", err);
-            });
-        }
-
-        // Smooth scroll to About section
         const about = document.getElementById("about");
 
         if (about) {
-
             about.scrollIntoView({
-
                 behavior: "smooth"
-
             });
-
         }
 
     });
-
 }
 
 // ============================================
